@@ -1,0 +1,156 @@
+<div class="orbit-system" aria-hidden="true">
+  <div class="orbit orbit-one"></div>
+  <div class="orbit orbit-two"></div>
+  <div class="orbit orbit-three"></div>
+
+  <div class="orbit-center">
+    <div class="center-glow"></div>
+    <span>JP</span>
+  </div>
+
+  <div class="orbiting-dot dot-one"></div>
+  <div class="orbiting-dot dot-two"></div>
+</div>
+
+<style>
+  .orbit-system {
+    position: relative;
+    width: min(100%, 480px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+  }
+
+  .orbit-system::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(96, 213, 215, 0.12),
+      transparent 65%
+    );
+    filter: blur(28px);
+  }
+
+  .orbit {
+    position: absolute;
+    border: 1px solid rgba(96, 213, 215, 0.2);
+    border-radius: 50%;
+  }
+
+  .orbit-one {
+    width: 40%;
+    height: 40%;
+  }
+
+  .orbit-two {
+    width: 68%;
+    height: 68%;
+    transform: rotateX(58deg) rotate(-25deg);
+  }
+
+  .orbit-three {
+    width: 95%;
+    height: 95%;
+    transform: rotateY(62deg) rotate(35deg);
+  }
+
+  .orbit-center {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(96, 213, 215, 0.6);
+    border-radius: 50%;
+    background: #0d2533;
+    box-shadow: 0 0 65px rgba(96, 213, 215, 0.18);
+  }
+
+  .orbit-center span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .center-glow {
+    position: absolute;
+    inset: -15px;
+    border: 1px solid rgba(96, 213, 215, 0.1);
+    border-radius: 50%;
+  }
+
+  .orbiting-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 18px var(--accent);
+  }
+
+  .dot-one {
+    animation: orbit-a 14s linear infinite;
+  }
+
+  .dot-two {
+    width: 5px;
+    height: 5px;
+    animation: orbit-b 21s linear infinite reverse;
+  }
+
+  @keyframes orbit-a {
+    from {
+      transform: rotate(0deg) translateX(165px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(165px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbit-b {
+    from {
+      transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .orbit-system {
+      max-width: 320px;
+    }
+
+    .dot-one {
+      animation-name: orbit-a-mobile;
+    }
+
+    @keyframes orbit-a-mobile {
+      from {
+        transform: rotate(0deg) translateX(115px);
+      }
+      to {
+        transform: rotate(360deg) translateX(115px);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .orbiting-dot {
+      animation: none;
+    }
+
+    .dot-one {
+      transform: translateX(115px);
+    }
+
+    .dot-two {
+      transform: translateX(-100px);
+    }
+  }
+</style>

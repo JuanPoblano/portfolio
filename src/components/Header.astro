@@ -1,0 +1,223 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+
+const navigation = [
+  { label: "About", href: "#about", key: "nav.about" },
+  { label: "Projects", href: "#projects", key: "nav.projects" },
+  { label: "Experience", href: "#experience", key: "nav.experience" },
+  { label: "Education", href: "#education", key: "nav.education" },
+  { label: "Contact", href: "#contact", key: "nav.contact" },
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href={base} class="brand" aria-label="Juan Poblano — Home">
+      <span class="brand-symbol">JP<span>.</span></span>
+      <span class="brand-name">JUAN POBLANO</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav
+      id="primary-navigation"
+      class="navigation"
+      aria-label="Main navigation"
+    >
+      {
+        navigation.map((item) => (
+          <a href={item.href} data-i18n={item.key}>
+            {item.label}
+          </a>
+        ))
+      }
+      <div class="language-switcher" role="group" aria-label="Select language">
+        <button type="button" data-language="en" aria-pressed="true">EN</button>
+        <button type="button" data-language="es" aria-pressed="false">ES</button
+        >
+        <button type="button" data-language="fr" aria-pressed="false">FR</button
+        >
+      </div>
+      <a
+        class="github-link"
+        href="https://github.com/JuanPoblano"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub ↗
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
+  const navigation = document.querySelector<HTMLElement>(".navigation");
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    navigation?.classList.toggle("open", !isOpen);
+  });
+
+  navigation?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navigation.classList.remove("open");
+      toggle?.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(7, 17, 30, 0.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 82px;
+    gap: 24px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+
+  .brand-symbol {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.1em;
+  }
+
+  .brand-symbol span {
+    color: var(--accent);
+  }
+
+  .brand-name {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .navigation a {
+    color: var(--muted);
+    font-size: 0.83rem;
+    transition: color 0.2s;
+  }
+
+  .navigation a:hover {
+    color: var(--accent);
+  }
+
+  .navigation .github-link {
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    color: var(--text);
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 20px;
+      height: 2px;
+      margin-inline: auto;
+      background: var(--text);
+    }
+
+    .navigation {
+      display: none;
+      position: absolute;
+      top: 82px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 18px 24px;
+      background: #0b1928;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navigation.open {
+      display: flex;
+    }
+
+    .navigation a {
+      padding: 14px 0;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .brand-name {
+      display: none;
+    }
+  }
+  .language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 4px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  .language-switcher button {
+    padding: 7px 9px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .language-switcher button.active {
+    background: rgba(96, 213, 215, 0.14);
+    color: var(--accent);
+  }
+</style>

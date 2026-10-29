@@ -1,0 +1,35 @@
+---
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Juan Poblano | Engineering Portfolio",
+  description = "Computer Systems Engineering, Avionics, IoT and Industry 4.0. Engineering portfolio of Juan Poblano.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#07111e" />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <Header />
+    <slot />
+    <script>
+      import { initializeLanguage } from "../scripts/interactions";
+
+      initializeLanguage();
+    </script>
+  </body>
+</html>
