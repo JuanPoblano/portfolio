@@ -1,0 +1,132 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+
+const projects = [
+  { name: "Bank ATM", folder: "bank_atm" },
+  { name: "Flexbox Flag", folder: "flexboxflag" },
+  { name: "Google Clone", folder: "googleclone" },
+  { name: "My CV Web", folder: "my-cv-web" },
+  { name: "Pinterest Clone", folder: "pinterestclone" },
+  { name: "Spotify Clone", folder: "spotifyclone" },
+  { name: "Zorbing", folder: "zorbing" },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Poblano | Engineering Portfolio</title>
+    <style>
+      :root {
+        font-family: Arial, sans-serif;
+        color: #eaf4ff;
+        background: #07111e;
+      }
+
+      body {
+        margin: 0;
+        padding: 0 24px;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 90px 0;
+      }
+
+      .eyebrow {
+        color: #60d5d7;
+        letter-spacing: 3px;
+        font-size: 12px;
+      }
+
+      h1 {
+        font-size: clamp(38px, 7vw, 76px);
+        line-height: 1.08;
+        max-width: 850px;
+      }
+
+      h1 span {
+        color: #60d5d7;
+      }
+
+      .intro {
+        max-width: 700px;
+        line-height: 1.8;
+        color: #a8b8c9;
+      }
+
+      h2 {
+        margin-top: 80px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        display: block;
+        padding: 25px;
+        border: 1px solid #284258;
+        border-radius: 14px;
+        background: #0e1c2c;
+        color: #eaf4ff;
+        text-decoration: none;
+        transition: 0.2s ease;
+      }
+
+      .card:hover {
+        border-color: #60d5d7;
+        transform: translateY(-4px);
+      }
+
+      .card p {
+        color: #a8b8c9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <p class="eyebrow">SOFTWARE ENGINEERING · AVIONICS · IoT</p>
+
+      <h1>
+        From aircraft systems to{" "}
+        <span>software engineering.</span>
+      </h1>
+
+      <p class="intro">
+        I'm Juan Poblano, a Computer Systems Engineering student specializing in
+        IoT and Industry 4.0, with a background in avionics and international
+        technical support.
+      </p>
+
+      <p class="intro">
+        Final-year student seeking curricular or extracurricular university
+        internships in Spain.
+      </p>
+
+      <h2>Previous Web Projects</h2>
+
+      <div class="grid">
+        {
+          projects.map((project) => (
+            <a
+              class="card"
+              href={`${base}projects/${project.folder}/index.html`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h3>{project.name}</h3>
+              <p>Open project →</p>
+            </a>
+          ))
+        }
+      </div>
+    </main>
+  </body>
+</html>
