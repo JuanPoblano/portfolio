@@ -1,0 +1,46 @@
+---
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Juan Poblano | Engineering Portfolio",
+  description = "Juan Poblano — final-year Computer Systems Engineering student. Telemetry, avionics, software and connected systems. Seeking university internships in Spain.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script is:inline>
+      try { document.documentElement.dataset.theme = localStorage.getItem('juan-theme') === 'light' ? 'light' : 'dark'; } catch {}
+    </script>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0d0c11" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon-jp-mark.svg`} />
+    <link rel="icon" type="image/png" sizes="256x256" href={`${import.meta.env.BASE_URL}favicon-jp-mark.png`} />
+    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}favicon-jp-mark.png`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+
+  <body>
+    <Header />
+    <slot />
+    <script>
+      import { initializeTheme } from "../scripts/theme";
+      import { initializeLanguage } from "../scripts/interactions";
+
+      initializeLanguage();
+      initializeTheme();
+    </script>
+  </body>
+</html>
