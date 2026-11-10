@@ -1,8 +1,8 @@
- //Base de datos de la cuentas registradas
+ //Base de datos de las cuentas registradas
         var cuentas = [
-            { id: 1, nombre: "Rene", saldo: 200, password: 1234, numcuenta: 1029384756 },
-            { id: 2, nombre: "Kristina", saldo: 290, password: 2345, numcuenta: 0987654321 },
-            { id: 3, nombre: "Rony", saldo: 67, password: 3456, numcuenta: 1234567890 }
+            { id: 1, nombre: "Rene", saldo: 200, password: 1234, numcuenta: "1029384756" },
+            { id: 2, nombre: "Kristina", saldo: 290, password: 2345, numcuenta: "0987654321" },
+            { id: 3, nombre: "Rony", saldo: 67, password: 3456, numcuenta: "1234567890" }
         ];
 
         var pagePortada = document.getElementById("portada");
@@ -29,10 +29,6 @@
             setUsersDatatoForm();
 
 
-            function interfaceUserAccount() {
-
-            }
-
             //Funcion para obtener data del form
             function getUserOption() {
 
@@ -42,9 +38,7 @@
                 for (let i = 0; i < cuentas.length; i++) {
 
                     if (userOptionSaved == cuentas[i].id && passwordSaved == cuentas[i].password) {
-                        console.log("acceso correcto")
                         var idUserSelected = cuentas[i].id;
-                        var nameUserSelected = cuentas[i].nombre;
                     }
                     else {
                         contador++;
@@ -53,31 +47,26 @@
 
 
                 if (idUserSelected == 1) {
-                    console.log("Ingresaste como " + nameUserSelected)
                     userAccount=cuentas[idUserSelected-1];
                     showCuenta(userAccount);
                 }
 
                 else if (idUserSelected == 2) {
-                    console.log("Ingresaste como " + nameUserSelected)
                     userAccount = cuentas[idUserSelected - 1];
                     showCuenta(userAccount);
                 }
 
                 else if (idUserSelected == 3) {
-                    console.log("Ingresaste como " + nameUserSelected)
                     userAccount = cuentas[idUserSelected - 1];
                     showCuenta(userAccount);
                 }
 
                 else if (contador == 3) {
                     
-                    console.log("Usuario o contraseña incorrectos")
                     errorConection()
                 }
 
                 else {
-                    console.log("porfa rellena los campos solicitados")
                     errorConection()
                 }
 
@@ -131,19 +120,15 @@
                         return;
                     }
                     if (target.value==="deposit") {
-                        console.log(`depositar a ${userAccount.nombre}`);
                         var btnEnter = document.getElementById("btn-enter");
                         btnEnter.value = "enterDeposit"
                         var inPageFunctions = document.getElementById("pageFunctions");
                         inPageFunctions.prepend(text);
                         text.innerHTML = "Enter the amount you wish to deposit to your account.";
                         showKeyPad();
-                        console.log(userAccount)
-                        console.log(btnEnter)
                         return;
                     }
                     if (target.value=="withdraw") {
-                        console.log(`retirar a ${userAccount.nombre}`);
                         var btnEnter = document.getElementById("btn-enter");
                         btnEnter.value = "enterDeposit"
                         var inPageFunctions = document.getElementById("pageFunctions");
@@ -151,12 +136,9 @@
                         btnEnter.value = "enterWithdraw"
                         text.innerHTML = "Enter the amount you wish to withdraw from your account";
                         showKeyPad();
-                        console.log(userAccount)
-                        console.log(btnEnter)
                         return;
                     }
                     if (target.value=="balance") {
-                        console.log(`Ver saldo de ${userAccount.nombre}`)
                         seeBalance();
                         return;
                     }
@@ -165,60 +147,48 @@
         
 
                 function depositMoney() {
-                        console.log("Saldo Antes de depositar: " + userAccount.saldo)
-                        const { id, nombre, saldo, password, numcuenta } = userAccount;
+                        const { saldo } = userAccount;
                         const { displayValue } = dataKeyPad;
                         let money = parseInt(displayValue);
                         let preDeposit;
-                        console.log(`Depositar $ ${money} a ${nombre} en la cuenta ${numcuenta}`)
                         if(!money==0){
                                 preDeposit = money + saldo;
                             if (preDeposit <= 990 ) {
                                 userAccount.saldo = preDeposit;
-                                console.log("Deposito exitoso");
                                 Qual.successd("Success","Deposit Made Successfully");
                             }
                             else {
-                                console.log("fallo el deposito");
                                 Qual.warningd("Warning: failed deposit","You cannot have more than $990 in your account, check your balance and try again.");
                                 
                             }             
                         } 
                         else{
-                            console.log("no se puede deporsitar 0")
                             Qual.errord("Error!","Please enter an amount other than zero.");
                             
                         }
 
-                        console.log("Saldo despues de depositar: "+userAccount.saldo)
                     
                     }
 
                     function withdrawMoney() {
-                        console.log("Saldo Antes de Retirar: " + userAccount.saldo)
-                        const { id, nombre, saldo, password, numcuenta } = userAccount;
+                        const { saldo } = userAccount;
                         const { displayValue } = dataKeyPad;
                         let money = parseInt(displayValue);
-                        console.log(`Retirar $ ${money} a ${nombre} en la cuenta ${numcuenta}`);
                         let preDeposit;
                         
                         if (!money == 0) {
                             preDeposit = saldo-money;
                             if (preDeposit >= 10) {
                                 userAccount.saldo = preDeposit;
-                                console.log("Retiro exitoso");
                                 Qual.successd("Success","Successful withdrawal");
                             }
                             else {
-                                console.log("fallo el Retiro");
                                 Qual.warningd("Warning: unsuccessful withdrawal","You cannot have less than $10 in your account, check your balance and try again.");
                             }
                         }
                         else {
-                            console.log("no se puede retirar 0")
                             Qual.errord("Error!","Please enter an amount other than zero.");
                         }                      
-                        console.log("Saldo despues de retirar: " + userAccount.saldo)
 
                         }
                 function seeBalance(){
@@ -281,14 +251,12 @@
                         return;
                     }
                     if (target.value=="enterDeposit") { 
-                        console.log("estoy presionando enter")  
                         depositMoney()
                         resetScreen(); 
                         updateDisplay();                                      
                         return;
                     }
                     if (target.value == "enterWithdraw") {
-                    console.log("estoy presionando enter")
                     withdrawMoney();
                     resetScreen();
                     updateDisplay();

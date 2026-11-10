@@ -1,18 +1,11 @@
 
 export const profile = {
   name: "Juan Poblano",
-  headline: "Computer Systems Engineering Student",
-  specialization: "IoT & Industry 4.0",
-  background: "Avionics",
-  location: "Spain",
-  availability: "Seeking university internships in Spain",
   email: "poblanojuan30@gmail.com",
 
   social: {
     github: "https://github.com/JuanPoblano",
     linkedin: "https://www.linkedin.com/in/juanpoblano/",
-    platzi: "https://platzi.com/p/juanpoblano/",
-    duolingo: "https://www.duolingo.com/profile/Poblatino",
     youtube: "https://www.youtube.com/@PoblanoJuan",
   },
 };

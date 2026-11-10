@@ -11,6 +11,9 @@ const {
   title = "Juan Poblano | Engineering Portfolio",
   description = "Juan Poblano — final-year Computer Systems Engineering student. Telemetry, avionics, software and connected systems. Seeking university internships in Spain.",
 } = Astro.props;
+const site = Astro.site ?? new URL("https://juanpoblano.github.io");
+const pageUrl = new URL(import.meta.env.BASE_URL, site);
+const previewImage = new URL("images/aircraft-systems/overview.png", pageUrl);
 ---
 
 <!doctype html>
@@ -30,6 +33,14 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content={pageUrl.href} />
+    <meta property="og:image" content={previewImage.href} />
+    <meta property="og:image:alt" content="Aircraft simulator overview dashboard showing synthetic flight telemetry." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={previewImage.href} />
   </head>
 
   <body>

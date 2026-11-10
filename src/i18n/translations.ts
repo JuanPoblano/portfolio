@@ -92,69 +92,10 @@ export const translations = {
       goal: "University internship in Spain",
     },
 
-    engineeringProjects: [
-      {
-        category: "AEROSPACE · SOFTWARE ENGINEERING",
-        title: "Aircraft Systems Monitoring & Fault Diagnosis",
-        description:
-          "A personal project created to bring together my background in avionics and my studies in software engineering. I built an interactive simulator to explore aircraft telemetry, flight phases, fault diagnosis, and full-stack systems integration.",
-        status: "Completed",
-        date: "2026",
-      },
-      {
-        category: "INDUSTRY 4.0 · IoT",
-        title: "Smart Factory Monitoring System",
-        description:
-          "A planned industrial monitoring platform connecting simulated equipment data, messaging protocols, databases and operational dashboards.",
-        status: "Planned",
-        date: "Target: Jan 2027",
-      },
-      {
-        category: "AEROSPACE · SYSTEMS",
-        title: "Aerospace Systems Integration Lab",
-        description:
-          "A planned simulation and systems engineering laboratory focused on integration, validation and technical documentation.",
-        status: "Planned",
-        date: "Timeline: TBD",
-      },
-    ],
-
-    academicProjects: [
-      {
-        category: "AVIONICS · AIRCRAFT SYSTEMS",
-        title: "Airbus A320 ATA 27 Self-paced Training Course",
-        description:
-          "Final project at UNAQ, May–August 2020: I created a dynamic PowerPoint-based virtual course about A320-family flight controls (ATA 27). Designed for other learners to work through independently at their own pace.",
-        date: "May–August 2020",
-      },
-      {
-        category: "AVIATION · MAINTENANCE",
-        title: "Cessna 172 Maintenance Project",
-        description:
-          "Aircraft-maintenance workshop simulation at UNAQ, February–March 2020. We followed maintenance manuals and ATA references, removing and reinstalling components while reproducing the working procedures of an aircraft workshop.",
-        date: "February–March 2020",
-      },
-      {
-        category: "ROBOTICS · TEAMWORK",
-        title: "WER México Robotics Competition",
-        description:
-          "Member of a finalist team in the 2017 WER México robotics competition.",
-        date: "2017",
-      },
-      {
-        category: "ROBOTICS · EMBEDDED SYSTEMS",
-        title: "Arduino Obstacle Avoidance Robot",
-        description:
-          "Academic robotics project using Arduino and ultrasonic obstacle detection. Awarded second place.",
-        date: "2017",
-      },
-    ],
-
     webProjects: [
       { category: "WEB APPLICATION" },
       { category: "CSS LAYOUT" },
       { category: "FRONTEND" },
-      { category: "PERSONAL WEBSITE" },
       { category: "FRONTEND" },
       { category: "UI RECREATION" },
       { category: "WEB PROJECT" },
@@ -183,33 +124,19 @@ export const translations = {
       },
     ],
 
-    education: [
-      {
-        degree: "Computer Systems Engineering",
-        description:
-          "Undergraduate engineering studies focused on software, IoT and Industry 4.0.",
-      },
-      {
-        degree: "Frontend Development Bootcamp",
-        description:
-          "Intensive frontend web development training.",
-      },
-      {
-        degree: "TSU in Aeronautical Maintenance, Avionics",
-        description:
-          "Technical higher education in avionics, aircraft systems and maintenance.",
-      },
-      {
-        degree: "Technical High School Diploma in Programming",
-        description:
-          "Upper-secondary technical education (high school) specializing in programming.",
-      },
-    ],
-
     skillGroups: [
-      { title: "Software & Development" },
-      { title: "Engineering & Technical Interests" },
-      { title: "Tools & Technologies" },
+      {
+        title: "Software & Development",
+        skills: ["Python", "Java", "C++", "JavaScript", "TypeScript", "HTML", "CSS", "SQL", "Git", "GitHub"],
+      },
+      {
+        title: "Engineering & Technical Interests",
+        skills: ["Avionics", "Aircraft Systems", "IoT", "Industry 4.0", "Telemetry", "Robotics", "Embedded Systems", "Systems Integration"],
+      },
+      {
+        title: "Tools & Technologies",
+        skills: ["Astro", "VS Code", "Arduino", "Docker", "PowerPoint", "Technical Documentation"],
+      },
     ],
 
     languages: [
@@ -312,7 +239,7 @@ export const translations = {
       aboutP2:
         "Me interesa especialmente la conexión entre la industria aeroespacial, los dispositivos conectados, la automatización industrial y los sistemas de software inteligentes.",
       aboutP3:
-        "Aporto una perspectiva internacional desarrollada mediante el soporte técnico, la experiencia en manufactura y el trabajo en el extranjero.",
+        "Aporto una perspectiva internacional forjada en el soporte técnico, los entornos de fabricación y el trabajo en el extranjero.",
 
       engineeringTitleFirst: "Proyectos de",
       engineeringTitleAccent: "ingeniería.",
@@ -349,7 +276,7 @@ export const translations = {
       contactTitleFirst: "Construyamos algo",
       contactTitleAccent: "significativo.",
       contactIntro:
-        "Me interesan el sector aeroespacial, la ingeniería de software, IoT y la Industria 4.0. Actualmente busco prácticas universitarias curriculares o extracurriculares en España.",
+        "Me interesan el sector aeroespacial, la ingeniería de software, IoT y la Industria 4.0. Busco prácticas universitarias, curriculares o extracurriculares, en España.",
       emailButton: "Enviar un correo",
     },
 
@@ -362,69 +289,10 @@ export const translations = {
       goal: "Prácticas universitarias en España",
     },
 
-    engineeringProjects: [
-      {
-        category: "AEROESPACIAL · INGENIERÍA DE SOFTWARE",
-        title: "Monitorización de sistemas aeronáuticos y diagnóstico de fallos",
-        description:
-          "Un proyecto personal creado para unir mi formación en aviónica con mis estudios de ingeniería de software. Construí un simulador interactivo para explorar la telemetría aeronáutica, las fases de vuelo, el diagnóstico de fallos y la integración de sistemas full-stack.",
-        status: "Completado",
-        date: "2026",
-      },
-      {
-        category: "INDUSTRIA 4.0 · IoT",
-        title: "Sistema de monitorización de fábrica inteligente",
-        description:
-          "Plataforma industrial planificada para conectar datos simulados de equipos, protocolos de mensajería, bases de datos y paneles de supervisión operativa.",
-        status: "Planificado",
-        date: "Objetivo: enero de 2027",
-      },
-      {
-        category: "AEROESPACIAL · SISTEMAS",
-        title: "Laboratorio de integración de sistemas aeroespaciales",
-        description:
-          "Laboratorio planificado de simulación e ingeniería de sistemas, centrado en integración, validación y documentación técnica.",
-        status: "Planificado",
-        date: "Fecha por definir",
-      },
-    ],
-
-    academicProjects: [
-      {
-        category: "AVIÓNICA · SISTEMAS AERONÁUTICOS",
-        title: "Curso autodidacta Airbus A320 ATA 27",
-        description:
-          "Trabajo final en UNAQ, mayo–agosto de 2020: creé un curso virtual dinámico en PowerPoint sobre los controles de vuelo de la familia A320 (ATA 27), diseñado para que otras personas pudieran formarse de manera autónoma y a su propio ritmo.",
-        date: "Mayo–agosto de 2020",
-      },
-      {
-        category: "AVIACIÓN · MANTENIMIENTO",
-        title: "Proyecto de mantenimiento de Cessna 172",
-        description:
-          "Simulación de un taller de mantenimiento aeronáutico en UNAQ, febrero–marzo de 2020. Trabajamos siguiendo los manuales de mantenimiento y las referencias ATA, desmontando y volviendo a montar componentes para reproducir los procedimientos de un taller aeronáutico.",
-        date: "Febrero–marzo de 2020",
-      },
-      {
-        category: "ROBÓTICA · TRABAJO EN EQUIPO",
-        title: "Competición de robótica WER México",
-        description:
-          "Integrante de un equipo finalista en la competición de robótica WER México de 2017.",
-        date: "2017",
-      },
-      {
-        category: "ROBÓTICA · SISTEMAS EMBEBIDOS",
-        title: "Robot Arduino con evasión de obstáculos",
-        description:
-          "Proyecto académico de robótica con Arduino y detección ultrasónica de obstáculos. Obtuvo el segundo lugar.",
-        date: "2017",
-      },
-    ],
-
     webProjects: [
       { category: "APLICACIÓN WEB" },
       { category: "DISEÑO CON CSS" },
       { category: "FRONTEND" },
-      { category: "SITIO WEB PERSONAL" },
       { category: "FRONTEND" },
       { category: "RECREACIÓN DE INTERFAZ" },
       { category: "PROYECTO WEB" },
@@ -453,33 +321,19 @@ export const translations = {
       },
     ],
 
-    education: [
-      {
-        degree: "Ingeniería en Sistemas Computacionales",
-        description:
-          "Estudios universitarios de ingeniería enfocados en software, IoT e Industria 4.0.",
-      },
-      {
-        degree: "Bootcamp de Desarrollo Frontend",
-        description:
-          "Formación intensiva en desarrollo web frontend.",
-      },
-      {
-        degree: "TSU en Mantenimiento Aeronáutico, Aviónica",
-        description:
-          "Formación técnica superior en aviónica, sistemas aeronáuticos y mantenimiento.",
-      },
-      {
-        degree: "Bachillerato Tecnológico en Programación",
-        description:
-          "Educación media superior (high school) con especialización técnica en programación.",
-      },
-    ],
-
     skillGroups: [
-      { title: "Software y desarrollo" },
-      { title: "Ingeniería e intereses técnicos" },
-      { title: "Herramientas y tecnologías" },
+      {
+        title: "Software y desarrollo",
+        skills: ["Python", "Java", "C++", "JavaScript", "TypeScript", "HTML", "CSS", "SQL", "Git", "GitHub"],
+      },
+      {
+        title: "Ingeniería e intereses técnicos",
+        skills: ["Aviónica", "Sistemas aeronáuticos", "IoT", "Industria 4.0", "Telemetría", "Robótica", "Sistemas embebidos", "Integración de sistemas"],
+      },
+      {
+        title: "Herramientas y tecnologías",
+        skills: ["Astro", "VS Code", "Arduino", "Docker", "PowerPoint", "Documentación técnica"],
+      },
     ],
 
     languages: [
@@ -582,7 +436,7 @@ export const translations = {
       aboutP2:
         "Je m'intéresse particulièrement aux liens entre l'aérospatiale, les objets connectés, l'automatisation industrielle et les systèmes logiciels intelligents.",
       aboutP3:
-        "J'apporte une perspective internationale développée grâce à l'assistance technique, à une expérience en fabrication et au travail à l'étranger.",
+        "Mon parcours international s’est construit dans le support technique, en milieu industriel et lors de mes expériences professionnelles à l’étranger.",
 
       engineeringTitleFirst: "Projets",
       engineeringTitleAccent: "d'ingénierie.",
@@ -619,7 +473,7 @@ export const translations = {
       contactTitleFirst: "Construisons quelque chose",
       contactTitleAccent: "de significatif.",
       contactIntro:
-        "Je m'intéresse à l'aérospatiale, au génie logiciel, à l'IoT et à l'industrie 4.0. Je recherche actuellement un stage universitaire obligatoire ou facultatif en Espagne.",
+        "Je m’intéresse à l’aérospatiale, au génie logiciel, à l’IoT et à l’Industrie 4.0. Je recherche un stage en Espagne, dans le cadre obligatoire ou facultatif de mes études.",
       emailButton: "Envoyer un e-mail",
     },
 
@@ -632,69 +486,10 @@ export const translations = {
       goal: "Stage universitaire en Espagne",
     },
 
-    engineeringProjects: [
-      {
-        category: "AÉROSPATIAL · GÉNIE LOGICIEL",
-        title: "Supervision des systèmes aéronautiques et diagnostic des pannes",
-        description:
-          "Un projet personnel créé pour réunir ma formation en avionique et mes études en génie logiciel. J’ai conçu un simulateur interactif pour explorer la télémétrie aéronautique, les phases de vol, le diagnostic des pannes et l’intégration de systèmes full-stack.",
-        status: "Terminé",
-        date: "2026",
-      },
-      {
-        category: "INDUSTRIE 4.0 · IoT",
-        title: "Système de supervision d'usine intelligente",
-        description:
-          "Plateforme industrielle prévue pour connecter des données simulées d'équipements, des protocoles de messagerie, des bases de données et des tableaux de bord opérationnels.",
-        status: "Prévu",
-        date: "Objectif : janvier 2027",
-      },
-      {
-        category: "AÉROSPATIAL · SYSTÈMES",
-        title: "Laboratoire d'intégration de systèmes aérospatiaux",
-        description:
-          "Laboratoire prévu de simulation et d'ingénierie système, axé sur l'intégration, la validation et la documentation technique.",
-        status: "Prévu",
-        date: "Calendrier à définir",
-      },
-    ],
-
-    academicProjects: [
-      {
-        category: "AVIONIQUE · SYSTÈMES AÉRONAUTIQUES",
-        title: "Formation autonome Airbus A320 ATA 27",
-        description:
-          "Projet de fin d’études à l’UNAQ, mai–août 2020 : création d’un cours virtuel dynamique sur PowerPoint consacré aux commandes de vol de la famille A320 (ATA 27), conçu pour permettre à d’autres personnes de se former en autonomie, à leur rythme.",
-        date: "Mai–août 2020",
-      },
-      {
-        category: "AVIATION · MAINTENANCE",
-        title: "Projet de maintenance d'un Cessna 172",
-        description:
-          "Simulation d’un atelier de maintenance aéronautique à l’UNAQ, février–mars 2020. Travail selon les manuels de maintenance et les références ATA, avec démontage et remontage de composants dans le cadre d’un atelier aéronautique.",
-        date: "Février–mars 2020",
-      },
-      {
-        category: "ROBOTIQUE · TRAVAIL D’ÉQUIPE",
-        title: "Compétition de robotique WER México",
-        description:
-          "Membre d’une équipe finaliste lors de la compétition de robotique WER México en 2017.",
-        date: "2017",
-      },
-      {
-        category: "ROBOTIQUE · SYSTÈMES EMBARQUÉS",
-        title: "Robot Arduino d’évitement d’obstacles",
-        description:
-          "Projet académique de robotique utilisant Arduino et la détection ultrasonique d’obstacles. Deuxième place obtenue.",
-        date: "2017",
-      },
-    ],
-
     webProjects: [
       { category: "APPLICATION WEB" },
       { category: "MISE EN PAGE CSS" },
       { category: "FRONTEND" },
-      { category: "SITE WEB PERSONNEL" },
       { category: "FRONTEND" },
       { category: "REPRODUCTION D'INTERFACE" },
       { category: "PROJET WEB" },
@@ -723,33 +518,19 @@ export const translations = {
       },
     ],
 
-    education: [
-      {
-        degree: "Ingénierie des systèmes informatiques",
-        description:
-          "Études universitaires d'ingénierie axées sur les logiciels, l'IoT et l'industrie 4.0.",
-      },
-      {
-        degree: "Bootcamp de développement frontend",
-        description:
-          "Formation intensive en développement web frontend.",
-      },
-      {
-        degree: "TSU en maintenance aéronautique, avionique",
-        description:
-          "Formation technique supérieure en avionique, systèmes aéronautiques et maintenance.",
-      },
-      {
-        degree: "Baccalauréat technologique en programmation",
-        description:
-          "Enseignement secondaire supérieur (équivalent high school) avec spécialisation technique en programmation.",
-      },
-    ],
-
     skillGroups: [
-      { title: "Logiciels et développement" },
-      { title: "Ingénierie et intérêts techniques" },
-      { title: "Outils et technologies" },
+      {
+        title: "Logiciels et développement",
+        skills: ["Python", "Java", "C++", "JavaScript", "TypeScript", "HTML", "CSS", "SQL", "Git", "GitHub"],
+      },
+      {
+        title: "Ingénierie et intérêts techniques",
+        skills: ["Avionique", "Systèmes aéronautiques", "IoT", "Industrie 4.0", "Télémétrie", "Robotique", "Systèmes embarqués", "Intégration de systèmes"],
+      },
+      {
+        title: "Outils et technologies",
+        skills: ["Astro", "VS Code", "Arduino", "Docker", "PowerPoint", "Documentation technique"],
+      },
     ],
 
     languages: [

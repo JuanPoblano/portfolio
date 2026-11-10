@@ -49,21 +49,52 @@ function getTranslation(language: Language, key: string): string | undefined {
 export function setLanguage(language: Language): void {
   document.documentElement.lang = language;
 
-  document.querySelectorAll<HTMLElement>("[data-i18n]").forEach((element) => {
-  const key = element.dataset.i18n;
-  if (!key) return;
+  const title = getTranslation(language, "seo.title");
+  if (title !== undefined) document.title = title;
 
-  const value = getTranslation(language, key);
-
-  if (value !== undefined) {
-    const attribute = element.dataset.i18nAttr;
-    if (attribute) {
-      element.setAttribute(attribute, value);
-    } else {
-      element.textContent = value;
-    }
+  const description = getTranslation(language, "seo.description");
+  if (description !== undefined) {
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", description);
+    document
+      .querySelector('meta[property="og:description"]')
+      ?.setAttribute("content", description);
   }
-});
+  document
+    .querySelector('meta[property="og:title"]')
+    ?.setAttribute("content", title ?? document.title);
+  document
+    .querySelector('meta[name="twitter:title"]')
+    ?.setAttribute("content", title ?? document.title);
+  document
+    .querySelector('meta[name="twitter:description"]')
+    ?.setAttribute("content", description ?? "");
+  const imageAlt = getTranslation(language, "aircraftGallery.normal.alt");
+  if (imageAlt !== undefined) {
+    document
+      .querySelector('meta[property="og:image:alt"]')
+      ?.setAttribute("content", imageAlt);
+  }
+  document
+    .querySelector('meta[property="og:locale"]')
+    ?.setAttribute("content", { en: "en_US", es: "es_ES", fr: "fr_FR" }[language]);
+
+  document.querySelectorAll<HTMLElement>("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+    if (!key) return;
+
+    const value = getTranslation(language, key);
+
+    if (value !== undefined) {
+      const attribute = element.dataset.i18nAttr;
+      if (attribute) {
+        element.setAttribute(attribute, value);
+      } else {
+        element.textContent = value;
+      }
+    }
+  });
 
   document.querySelectorAll<HTMLButtonElement>("[data-language]").forEach((button) => {
     const selected = button.dataset.language === language;
@@ -96,11 +127,11 @@ export function initializeLanguage(): void {
 
   document.querySelectorAll<HTMLButtonElement>("[data-language]").forEach((button) => {
     button.addEventListener("click", () => {
-     const language = button.dataset.language ?? null;
+      const language = button.dataset.language ?? null;
 
-if (isLanguage(language)) {
-  setLanguage(language);
-}
+      if (isLanguage(language)) {
+        setLanguage(language);
+      }
     });
   });
 
