@@ -56,7 +56,12 @@ export function setLanguage(language: Language): void {
   const value = getTranslation(language, key);
 
   if (value !== undefined) {
-    element.textContent = value;
+    const attribute = element.dataset.i18nAttr;
+    if (attribute) {
+      element.setAttribute(attribute, value);
+    } else {
+      element.textContent = value;
+    }
   }
 });
 
@@ -65,6 +70,17 @@ export function setLanguage(language: Language): void {
     button.classList.toggle("active", selected);
     button.setAttribute("aria-pressed", String(selected));
   });
+
+  const activeImage = document.querySelector<HTMLImageElement>(
+    "[data-aircraft-image][aria-pressed='true'] img",
+  );
+  const mainImage = document.querySelector<HTMLImageElement>(
+    "[data-aircraft-main-image]",
+  );
+
+  if (activeImage && mainImage) {
+    mainImage.alt = activeImage.alt;
+  }
 
   syncThemeControl();
 
@@ -87,4 +103,32 @@ if (isLanguage(language)) {
 }
     });
   });
+
+  const mainImage = document.querySelector<HTMLImageElement>(
+    "[data-aircraft-main-image]",
+  );
+
+  document
+    .querySelectorAll<HTMLButtonElement>("[data-aircraft-image]")
+    .forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedImage = button.querySelector("img");
+        if (!mainImage || !selectedImage) return;
+
+        mainImage.src = selectedImage.src;
+        mainImage.alt = selectedImage.alt;
+        mainImage.toggleAttribute(
+          "data-aircraft-image-fit",
+          button.dataset.aircraftImageFit === "contain",
+        );
+
+        document
+          .querySelectorAll<HTMLButtonElement>("[data-aircraft-image]")
+          .forEach((item) => {
+            const selected = item === button;
+            item.classList.toggle("is-active", selected);
+            item.setAttribute("aria-pressed", String(selected));
+          });
+      });
+    });
 }

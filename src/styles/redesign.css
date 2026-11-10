@@ -26,3 +26,27 @@ html[data-theme=light] .field-section{background:#eeeaf5}html[data-theme=light] 
 html[data-theme=light] #projects{background:#eee8f6;color:#221a30}html[data-theme=light] #projects .section-label,html[data-theme=light] #projects .muted,html[data-theme=light] #projects .project-date,html[data-theme=light] #projects .disclosure-caption{color:#655672}html[data-theme=light] #projects .accent,html[data-theme=light] #projects .project-number,html[data-theme=light] #projects .project-category{color:#6527c6}html[data-theme=light] .project-card{background:#fff;border-color:#d9cae8;box-shadow:none}html[data-theme=light] .project-card:hover{border-color:#9465c5;box-shadow:0 14px 35px #4520640c}html[data-theme=light] .project-status{background:#f0e7fb;border-color:#d7c1ed;color:#66358e}html[data-theme=light] .project-card .tech-list span{background:#efe8f6;color:#59436e}html[data-theme=light] .project-card details{border-color:#dbcee8}html[data-theme=light] .project-card summary{color:#6527c6}html[data-theme=light] #projects summary:focus-visible{outline-color:#6527c6}
 html[data-theme=light] .timeline-item:hover{background:#f0eaf7}html[data-theme=light] .timeline-meta{color:#6f5c7e}html[data-theme=light] .web-card:hover{background:#f0eaf7;border-color:#a581c6}html[data-theme=light] .contact-section{background:radial-gradient(ellipse at 90% 70%,#e0c9fb,#eee5f8);border-color:#d4bce9}html[data-theme=light] .contact-section .accent{color:#6527c6}html[data-theme=light] .footer{background:#eae3f2;color:#62546f;border-color:#d8cce4}html[data-theme=light] .motion-toggle{background:#f9f6fdef;color:#5c3a78;border-color:#cbb6df}html[data-theme=light] ::selection{color:white;background:#6527c6}
 @media(max-width:1050px){.header-inner>.theme-toggle{order:1;margin-left:auto}.header-inner>.menu-toggle{order:2}.header-inner>.navigation{order:3;margin-left:0}.header-inner{gap:12px!important}}
+
+.featured-project{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start;gap:32px;padding:clamp(22px,4vw,40px);background:var(--surface)}
+.featured-project__details{min-width:0}
+.featured-project h3{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.15;margin:18px 0}
+.featured-project__summary{margin-top:0}
+.featured-project .project-date{margin-top:20px;padding-top:0}
+.featured-project__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.featured-project__actions .button{padding:12px 16px}
+.aircraft-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;min-width:0}
+.aircraft-gallery__main-image{grid-column:1/-1;display:block;width:100%;height:auto;aspect-ratio:1560/888;object-fit:cover;border:1px solid var(--border);border-radius:8px}
+.aircraft-gallery__main-image[data-aircraft-image-fit="contain"]{object-fit:contain}
+.aircraft-gallery__item{display:flex;flex-direction:column;gap:8px;min-width:0;padding:7px;border:1px solid var(--border);border-radius:8px;background:var(--surface-light);color:var(--text);text-align:left;cursor:pointer;transition:border-color .2s,transform .2s}
+.aircraft-gallery__item:hover{transform:translateY(-2px);border-color:var(--accent)}
+.aircraft-gallery__item.is-active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.aircraft-gallery__item img{display:block;width:100%;height:auto;aspect-ratio:1560/888;object-fit:cover;border-radius:4px}
+.aircraft-gallery__item[data-aircraft-image-fit="contain"] img{object-fit:contain}
+.aircraft-gallery__item span{padding:0 3px 2px;font-size:.8rem;color:var(--muted)}
+.aircraft-gallery__item:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.roadmap-disclosure{margin-top:34px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.roadmap-disclosure>summary{display:flex;justify-content:space-between;gap:18px;padding:20px 0;font-weight:650;color:var(--text)}
+.roadmap-disclosure .project-grid{grid-template-columns:repeat(2,minmax(0,1fr));padding-bottom:24px}
+
+@media(max-width:900px){.featured-project{grid-template-columns:1fr}.roadmap-disclosure .project-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.featured-project{padding:20px}.featured-project__actions{align-items:stretch}.featured-project__actions .button{flex:1 1 100%}.aircraft-gallery{gap:8px}.aircraft-gallery__item{padding:5px}.aircraft-gallery__item span{font-size:.72rem}}

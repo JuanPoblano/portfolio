@@ -20,6 +20,8 @@ import {
 const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 
 const projectUrl = (folder: string) => `${base}projects/${folder}/index.html`;
+const featuredAircraftProject = engineeringProjects[0];
+const roadmapProjects = engineeringProjects.slice(1);
 ---
 
 <BaseLayout>
@@ -102,6 +104,268 @@ const projectUrl = (folder: string) => `${base}projects/${folder}/index.html`;
       </div>
     </section>
 
+    <!-- ENGINEERING PROJECTS -->
+    <section class="section section-bordered" id="projects">
+      <div class="container">
+        <span class="section-label" data-i18n="labels.engineering">{t('labels.engineering')}</span>
+
+        <h2 class="section-title">
+          <span data-i18n="content.engineeringTitleFirst">{t('content.engineeringTitleFirst')}</span>{" "}
+          <span class="accent" data-i18n="content.engineeringTitleAccent">{t('content.engineeringTitleAccent')}</span>
+        </h2>
+
+        <p class="muted section-intro" data-i18n="content.engineeringIntro">{t('content.engineeringIntro')}</p>
+
+        <article class="project-card featured-project">
+          <div class="featured-project__details">
+            <div class="card-top">
+              <span class="project-number">{featuredAircraftProject.number}</span>
+              <span
+                class="project-status"
+                data-i18n={`engineeringProjects.${featuredAircraftProject.id}.status`}
+              >
+                {featuredAircraftProject.status}
+              </span>
+            </div>
+
+            <span
+              class="project-category"
+              data-i18n={`engineeringProjects.${featuredAircraftProject.id}.category`}
+            >
+              {featuredAircraftProject.category}
+            </span>
+
+            <h3 data-i18n={`engineeringProjects.${featuredAircraftProject.id}.title`}>
+              {featuredAircraftProject.title}
+            </h3>
+
+            <p
+              class="muted"
+              data-i18n={`engineeringProjects.${featuredAircraftProject.id}.description`}
+            >
+              {featuredAircraftProject.description}
+            </p>
+
+            <p
+              class="muted featured-project__summary"
+              data-i18n={`engineeringProjects.${featuredAircraftProject.id}.details`}
+            >
+              {featuredAircraftProject.details}
+            </p>
+
+            <div class="tech-list">
+              {featuredAircraftProject.technologies.map((technology) => (
+                <span>{technology}</span>
+              ))}
+            </div>
+
+            <p
+              class="project-date"
+              data-i18n={`engineeringProjects.${featuredAircraftProject.id}.date`}
+            >
+              {featuredAircraftProject.date}
+            </p>
+
+            <div class="featured-project__actions">
+              <a
+                class="button"
+                href={featuredAircraftProject.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="aircraftProject.liveDemo"
+              >
+                {t("aircraftProject.liveDemo")}
+              </a>
+              <a
+                class="button button-outline"
+                href={featuredAircraftProject.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="aircraftProject.sourceCode"
+              >
+                {t("aircraftProject.sourceCode")}
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="aircraft-gallery"
+            role="group"
+            aria-label={t("aircraftGallery.label")}
+            data-i18n="aircraftGallery.label"
+            data-i18n-attr="aria-label"
+          >
+            <img
+              class="aircraft-gallery__main-image"
+              src={`${base}images/aircraft-systems/overview.png`}
+              alt={t("aircraftGallery.normal.alt")}
+              data-aircraft-main-image
+              loading="lazy"
+              decoding="async"
+              width="1560"
+              height="888"
+            />
+            <button
+              class="aircraft-gallery__item is-active"
+              type="button"
+              aria-pressed="true"
+              aria-label={t("aircraftGallery.normal.label")}
+              data-i18n="aircraftGallery.normal.label"
+              data-i18n-attr="aria-label"
+              data-aircraft-image
+            >
+              <img
+                src={`${base}images/aircraft-systems/overview.png`}
+                alt={t("aircraftGallery.normal.alt")}
+                data-i18n="aircraftGallery.normal.alt"
+                data-i18n-attr="alt"
+                loading="lazy"
+                decoding="async"
+                width="1560"
+                height="888"
+              />
+              <span data-i18n="aircraftGallery.normal.caption">
+                {t("aircraftGallery.normal.caption")}
+              </span>
+            </button>
+            <button
+              class="aircraft-gallery__item"
+              type="button"
+              aria-pressed="false"
+              aria-label={t("aircraftGallery.fault.label")}
+              data-i18n="aircraftGallery.fault.label"
+              data-i18n-attr="aria-label"
+              data-aircraft-image
+            >
+              <img
+                src={`${base}images/aircraft-systems/fault-detected.png`}
+                alt={t("aircraftGallery.fault.alt")}
+                data-i18n="aircraftGallery.fault.alt"
+                data-i18n-attr="alt"
+                loading="lazy"
+                decoding="async"
+                width="1560"
+                height="888"
+              />
+              <span data-i18n="aircraftGallery.fault.caption">
+                {t("aircraftGallery.fault.caption")}
+              </span>
+            </button>
+            <button
+              class="aircraft-gallery__item"
+              type="button"
+              aria-pressed="false"
+              aria-label={t("aircraftGallery.telemetry.label")}
+              data-i18n="aircraftGallery.telemetry.label"
+              data-i18n-attr="aria-label"
+              data-aircraft-image
+            >
+              <img
+                src={`${base}images/aircraft-systems/telemetry.png`}
+                alt={t("aircraftGallery.telemetry.alt")}
+                data-i18n="aircraftGallery.telemetry.alt"
+                data-i18n-attr="alt"
+                loading="lazy"
+                decoding="async"
+                width="1560"
+                height="888"
+              />
+              <span data-i18n="aircraftGallery.telemetry.caption">
+                {t("aircraftGallery.telemetry.caption")}
+              </span>
+            </button>
+            <button
+              class="aircraft-gallery__item"
+              type="button"
+              aria-pressed="false"
+              aria-label={t("aircraftGallery.flightSimulation.label")}
+              data-i18n="aircraftGallery.flightSimulation.label"
+              data-i18n-attr="aria-label"
+              data-aircraft-image
+              data-aircraft-image-fit="contain"
+            >
+              <img
+                src={`${base}images/aircraft-systems/flight-simulation-cropped.png`}
+                alt={t("aircraftGallery.flightSimulation.alt")}
+                data-i18n="aircraftGallery.flightSimulation.alt"
+                data-i18n-attr="alt"
+                loading="lazy"
+                decoding="async"
+                width="1896"
+                height="888"
+              />
+              <span data-i18n="aircraftGallery.flightSimulation.caption">
+                {t("aircraftGallery.flightSimulation.caption")}
+              </span>
+            </button>
+          </div>
+        </article>
+
+        <details class="section-disclosure roadmap-disclosure">
+          <summary>
+            <span data-i18n="compact.roadmap">{t("compact.roadmap")}</span>
+            <span class="disclosure-mark" aria-hidden="true">+</span>
+          </summary>
+          <div class="disclosure-body">
+            <div class="project-grid">
+              {
+                roadmapProjects.map((project) => (
+                  <article class="project-card">
+                    <div class="card-top">
+                      <span class="project-number">{project.number}</span>
+                      <span
+                        class="project-status"
+                        data-i18n={`engineeringProjects.${project.id}.status`}
+                      >
+                        {project.status}
+                      </span>
+                    </div>
+
+                    <span
+                      class="project-category"
+                      data-i18n={`engineeringProjects.${project.id}.category`}
+                    >
+                      {project.category}
+                    </span>
+
+                    <h3 data-i18n={`engineeringProjects.${project.id}.title`}>
+                      {project.title}
+                    </h3>
+
+                    <p
+                      class="muted"
+                      data-i18n={`engineeringProjects.${project.id}.description`}
+                    >
+                      {project.description}
+                    </p>
+
+                    <div class="tech-list">
+                      {project.technologies.map((technology) => (
+                        <span>{technology}</span>
+                      ))}
+                    </div>
+
+                    <details>
+                      <summary data-i18n="new.scope">{t("new.scope")}</summary>
+                      <p data-i18n={`new.scopes.${project.id}`}>
+                        {t(`new.scopes.${project.id}`)}
+                      </p>
+                    </details>
+                    <p
+                      class="project-date"
+                      data-i18n={`engineeringProjects.${project.id}.date`}
+                    >
+                      {project.date}
+                    </p>
+                  </article>
+                ))
+              }
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
     <section class="section field-section" id="fieldwork"><div class="container">
       <p class="section-label" data-i18n="new.featureLabel">{t('new.featureLabel')}</p>
       <div class="section-heading"><h2 class="section-title" data-i18n="new.rochTitle">{t('new.rochTitle')}</h2><p class="muted" data-i18n="new.rochIntro">{t('new.rochIntro')}</p></div>
@@ -129,29 +393,33 @@ const projectUrl = (folder: string) => `${base}projects/${folder}/index.html`;
 
         <div class="card-grid">
           {
-            academicProjects.map((project, index) => (
+            academicProjects.map((project) => (
               <article class="info-card">
                 <span
                   class="project-category"
-                  data-i18n={`academicProjects.${index}.category`}
+                  data-i18n={`academicProjects.${project.id}.category`}
                 >
                   {project.category}
                 </span>
 
-                <h3 data-i18n={`academicProjects.${index}.title`}>
-                  {t(`academicProjects.${index}.title`, project.title)}
+                <h3 data-i18n={`academicProjects.${project.id}.title`}>
+                  {t(`academicProjects.${project.id}.title`, project.title)}
                 </h3>
+
+                <p class="card-period" data-i18n={`academicProjects.${project.id}.date`}>
+                  {project.date}
+                </p>
 
                 <p class="card-meta">{project.institution}</p>
 
                 <p
                   class="muted"
-                  data-i18n={`academicProjects.${index}.description`}
+                  data-i18n={`academicProjects.${project.id}.description`}
                 >
-                  {t(`academicProjects.${index}.description`, project.description)}
+                  {t(`academicProjects.${project.id}.description`, project.description)}
                 </p>
 
-                {project.id === 'wer-mexico' && <a class="text-link" href="https://www.wermexico.com/wer2017" target="_blank" rel="noopener noreferrer">WER México 2017 ↗</a>}
+                {project.id === 'wer-mexico' && <a class="text-link" href="https://www.wermexico.com/wer2017" target="_blank" rel="noopener noreferrer" data-i18n="academicProjects.wer-mexico.link">{t("academicProjects.wer-mexico.link")}</a>}
                 <div class="tech-list">
                   {project.technologies.map((technology) => (
                     <span>{technology}</span>
@@ -162,71 +430,6 @@ const projectUrl = (folder: string) => `${base}projects/${folder}/index.html`;
           }
         </div>
         <aside class="competition-note"><strong data-i18n="new.other">{t('new.other')}</strong><p data-i18n="new.robomath">{t('new.robomath')}</p></aside>
-      </div>
-    </section>
-
-    <!-- ENGINEERING PROJECTS -->
-    <section class="section section-bordered" id="projects">
-      <div class="container">
-        <span class="section-label" data-i18n="labels.engineering">{t('labels.engineering')}</span>
-
-<details class="section-disclosure"><summary>        <h2 class="section-title">
-          <span data-i18n="content.engineeringTitleFirst">{t('content.engineeringTitleFirst')}</span>
-          <span class="accent" data-i18n="content.engineeringTitleAccent">{t('content.engineeringTitleAccent')}</span>
-        </h2><span class="disclosure-caption" data-i18n="compact.roadmap">{t("compact.roadmap")}</span><span class="disclosure-mark" aria-hidden="true">+</span></summary><div class="disclosure-body">
-
-        <p class="muted section-intro" data-i18n="content.engineeringIntro">{t('content.engineeringIntro')}</p>
-
-        <div class="project-grid">
-          {
-            engineeringProjects.map((project, index) => (
-              <article class="project-card">
-                <div class="card-top">
-                  <span class="project-number">{project.number}</span>
-                  <span
-                    class="project-status"
-                    data-i18n={`engineeringProjects.${index}.status`}
-                  >
-                    {project.status}
-                  </span>
-                </div>
-
-                <span
-                  class="project-category"
-                  data-i18n={`engineeringProjects.${index}.category`}
-                >
-                  {project.category}
-                </span>
-
-                <h3 data-i18n={`engineeringProjects.${index}.title`}>
-                  {project.title}
-                </h3>
-
-                <p
-                  class="muted"
-                  data-i18n={`engineeringProjects.${index}.description`}
-                >
-                  {project.description}
-                </p>
-
-                <div class="tech-list">
-                  {project.technologies.map((technology) => (
-                    <span>{technology}</span>
-                  ))}
-                </div>
-
-                <details><summary data-i18n="new.scope">{t('new.scope')}</summary><p data-i18n={`new.scopes.${index}`}>{t(`new.scopes.${index}`)}</p></details>
-                <p
-                  class="project-date"
-                  data-i18n={`engineeringProjects.${index}.date`}
-                >
-                  {project.date}
-                </p>
-              </article>
-            ))
-          }
-        </div>
-</div></details>
       </div>
     </section>
 
@@ -283,16 +486,18 @@ const projectUrl = (folder: string) => `${base}projects/${folder}/index.html`;
 
         <div class="card-grid">
           {
-            education.map((item, index) => (
+            education.map((item) => (
               <article class="info-card">
-                <span class="card-period">{item.period}</span>
+                <span class="card-period" data-i18n={`education.${item.id}.period`}>
+                  {t(`education.${item.id}.period`, item.period)}
+                </span>
 
-                <h3 data-i18n={`education.${index}.degree`}>{t(`education.${index}.degree`, item.degree)}</h3>
+                <h3 data-i18n={`education.${item.id}.degree`}>{t(`education.${item.id}.degree`, item.degree)}</h3>
 
                 <p class="card-meta">{item.school}</p>
 
-                <p class="muted" data-i18n={`education.${index}.description`}>
-                  {t(`education.${index}.description`, item.description)}
+                <p class="muted" data-i18n={`education.${item.id}.description`}>
+                  {t(`education.${item.id}.description`, item.description)}
                 </p>
               </article>
             ))
@@ -564,4 +769,3 @@ const projectUrl = (folder: string) => `${base}projects/${folder}/index.html`;
   });
 </script>
 </BaseLayout>
-

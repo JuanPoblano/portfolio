@@ -19,15 +19,19 @@ export const profile = {
 
 export const engineeringProjects = [
   {
-    id: "aircraft-telemetry",
+    id: "aircraft-systems-monitoring",
     number: "01",
-    category: "AEROSPACE · SOFTWARE",
-    title: "Aircraft Telemetry & Anomaly Detection",
+    category: "AEROSPACE · SOFTWARE ENGINEERING",
+    title: "Aircraft Systems Monitoring & Fault Diagnosis",
     description:
-      "An engineering project exploring synthetic aircraft telemetry, data processing, anomaly detection and interactive monitoring.",
-    technologies: ["Python", "Pandas", "FastAPI", "Plotly", "Pytest"],
-    status: "In development",
-    date: "Target: Dec 2026",
+      "A personal project created to bring together my background in avionics and my studies in software engineering. I built an interactive simulator to explore aircraft telemetry, flight phases, fault diagnosis, and full-stack systems integration.",
+    details:
+      "A personal initiative motivated by my interest in connecting avionics and software engineering. It includes synthetic aircraft telemetry, a simplified flight simulation, six predefined fault scenarios, ATA references, interactive dashboards and an optional local FastAPI backend.",
+    technologies: ["React", "TypeScript", "Python", "FastAPI", "SQLite", "Docker"],
+    status: "Completed",
+    date: "2026",
+    demoUrl: "https://juanpoblano.github.io/aircraft-systems-monitoring/",
+    sourceUrl: "https://github.com/JuanPoblano/aircraft-systems-monitoring",
   },
   {
     id: "smart-factory",
@@ -55,13 +59,14 @@ export const engineeringProjects = [
 
 export const academicProjects = [
   {
-    id: "arduino-robot",
-    title: "Arduino Obstacle Avoidance Robot",
-    institution: "CECyTEJ",
-    category: "ROBOTICS · EMBEDDED SYSTEMS",
+    id: "a320-ata27",
+    title: "Airbus A320 ATA 27 Self-paced Training Course",
+    institution: "UNAQ",
+    category: "AVIONICS · AIRCRAFT SYSTEMS",
     description:
-      "Academic robotics project using Arduino and ultrasonic obstacle detection. Awarded second place.",
-    technologies: ["Arduino", "Ultrasonic Sensors", "Robotics"],
+      "Independent academic study of Airbus A320 flight control systems using virtual training resources.",
+    date: "May–August 2020",
+    technologies: ["ATA 27", "Flight Controls", "PowerPoint", "Self-paced Learning"],
   },
   {
     id: "cessna-maintenance",
@@ -70,16 +75,8 @@ export const academicProjects = [
     category: "AVIATION · MAINTENANCE",
     description:
       "Academic aircraft maintenance project completed during avionics training, February–March 2020.",
+    date: "February–March 2020",
     technologies: ["Aircraft Maintenance", "Technical Procedures"],
-  },
-  {
-    id: "a320-ata27",
-    title: "Airbus A320 — ATA 27 Flight Controls",
-    institution: "UNAQ",
-    category: "AVIONICS · AIRCRAFT SYSTEMS",
-    description:
-      "Independent academic study of Airbus A320 flight control systems using virtual training resources.",
-    technologies: ["ATA 27", "Flight Controls", "PowerPoint", "Self-paced Learning"],
   },
   {
     id: "wer-mexico",
@@ -88,7 +85,18 @@ export const academicProjects = [
     category: "ROBOTICS · TEAMWORK",
     description:
       "Member of a finalist team in the 2017 WER México robotics competition.",
+    date: "2017",
     technologies: ["Robotics", "Teamwork", "Problem Solving"],
+  },
+  {
+    id: "arduino-robot",
+    title: "Arduino Obstacle Avoidance Robot",
+    institution: "CECyTEJ",
+    category: "ROBOTICS · EMBEDDED SYSTEMS",
+    description:
+      "Academic robotics project using Arduino and ultrasonic obstacle detection. Awarded second place.",
+    date: "2017",
+    technologies: ["Arduino", "Ultrasonic Sensors", "Robotics"],
   },
 ];
 
@@ -138,6 +146,7 @@ export const experience = [
 
 export const education = [
   {
+    id: "uveg",
     period: "2023 — Present",
     degree: "Computer Systems Engineering",
     school: "Universidad Virtual del Estado de Guanajuato (UVEG)",
@@ -145,13 +154,7 @@ export const education = [
       "Undergraduate engineering studies focused on software, IoT and Industry 4.0.",
   },
   {
-    period: "2018 — 2020",
-    degree: "Higher University Technician in Avionics",
-    school: "Universidad Aeronáutica en Querétaro (UNAQ)",
-    description:
-      "Technical higher education in avionics, aircraft systems and maintenance.",
-  },
-  {
+    id: "devf",
     period: "2021",
     degree: "Frontend Development Bootcamp",
     school: "DEV.F",
@@ -159,6 +162,15 @@ export const education = [
       "Intensive frontend web development training.",
   },
   {
+    id: "unaq",
+    period: "2018 — 2020",
+    degree: "TSU in Aeronautical Maintenance, Avionics",
+    school: "Universidad Aeronáutica en Querétaro (UNAQ)",
+    description:
+      "Technical higher education in avionics, aircraft systems and maintenance.",
+  },
+  {
+    id: "cecytej",
     period: "2015 — 2018",
     degree: "Technical High School Diploma in Programming",
     school:

@@ -22,15 +22,16 @@ export const translations = {
 
     labels: {
       about: "01 / About me",
-      engineering: "02 / Selected work",
-      academic: "03 / Academic engineering",
-      web: "04 / Development archive",
+      engineering: "02 / Engineering projects",
+      fieldwork: "03 / Team experience",
+      academic: "04 / Academic projects",
+      web: "08 / Development archive",
       experience: "05 / Professional background",
       education: "06 / Academic journey",
       skills: "07 / Technical toolkit",
-      learning: "08 / Continuous learning",
-      interests: "09 / Beyond engineering",
-      contact: "10 / Let's connect",
+      learning: "09 / Continuous learning",
+      interests: "10 / Beyond engineering",
+      contact: "11 / Let's connect",
     },
 
     content: {
@@ -93,12 +94,12 @@ export const translations = {
 
     engineeringProjects: [
       {
-        category: "AEROSPACE · SOFTWARE",
-        title: "Aircraft Telemetry & Anomaly Detection",
+        category: "AEROSPACE · SOFTWARE ENGINEERING",
+        title: "Aircraft Systems Monitoring & Fault Diagnosis",
         description:
-          "An engineering project exploring synthetic aircraft telemetry, data processing, anomaly detection and interactive monitoring.",
-        status: "In development",
-        date: "Target: Dec 2026",
+          "A personal project created to bring together my background in avionics and my studies in software engineering. I built an interactive simulator to explore aircraft telemetry, flight phases, fault diagnosis, and full-stack systems integration.",
+        status: "Completed",
+        date: "2026",
       },
       {
         category: "INDUSTRY 4.0 · IoT",
@@ -120,28 +121,32 @@ export const translations = {
 
     academicProjects: [
       {
-        category: "ROBOTICS · EMBEDDED SYSTEMS",
-        title: "Arduino Obstacle Avoidance Robot",
+        category: "AVIONICS · AIRCRAFT SYSTEMS",
+        title: "Airbus A320 ATA 27 Self-paced Training Course",
         description:
-          "Academic robotics project using Arduino and ultrasonic obstacle detection. Awarded second place.",
+          "Final project at UNAQ, May–August 2020: I created a dynamic PowerPoint-based virtual course about A320-family flight controls (ATA 27). Designed for other learners to work through independently at their own pace.",
+        date: "May–August 2020",
       },
       {
         category: "AVIATION · MAINTENANCE",
         title: "Cessna 172 Maintenance Project",
         description:
-          "Academic aircraft maintenance project completed during avionics training, February–March 2020.",
-      },
-      {
-        category: "AVIONICS · AIRCRAFT SYSTEMS",
-        title: "Airbus A320 — ATA 27 Flight Controls",
-        description:
-          "Independent academic study of Airbus A320 flight control systems using virtual training resources.",
+          "Aircraft-maintenance workshop simulation at UNAQ, February–March 2020. We followed maintenance manuals and ATA references, removing and reinstalling components while reproducing the working procedures of an aircraft workshop.",
+        date: "February–March 2020",
       },
       {
         category: "ROBOTICS · TEAMWORK",
         title: "WER México Robotics Competition",
         description:
           "Member of a finalist team in the 2017 WER México robotics competition.",
+        date: "2017",
+      },
+      {
+        category: "ROBOTICS · EMBEDDED SYSTEMS",
+        title: "Arduino Obstacle Avoidance Robot",
+        description:
+          "Academic robotics project using Arduino and ultrasonic obstacle detection. Awarded second place.",
+        date: "2017",
       },
     ],
 
@@ -185,14 +190,14 @@ export const translations = {
           "Undergraduate engineering studies focused on software, IoT and Industry 4.0.",
       },
       {
-        degree: "Higher University Technician in Avionics",
-        description:
-          "Technical higher education in avionics, aircraft systems and maintenance.",
-      },
-      {
         degree: "Frontend Development Bootcamp",
         description:
           "Intensive frontend web development training.",
+      },
+      {
+        degree: "TSU in Aeronautical Maintenance, Avionics",
+        description:
+          "Technical higher education in avionics, aircraft systems and maintenance.",
       },
       {
         degree: "Technical High School Diploma in Programming",
@@ -287,15 +292,16 @@ export const translations = {
 
     labels: {
       about: "01 / Sobre mí",
-      engineering: "02 / Proyectos destacados",
-      academic: "03 / Ingeniería académica",
-      web: "04 / Proyectos de desarrollo web",
+      engineering: "02 / Proyectos de ingeniería",
+      fieldwork: "03 / Experiencia en equipo",
+      academic: "04 / Proyectos académicos",
+      web: "08 / Proyectos de desarrollo web",
       experience: "05 / Experiencia profesional",
       education: "06 / Formación académica",
       skills: "07 / Habilidades técnicas",
-      learning: "08 / Formación continua",
-      interests: "09 / Más allá de la ingeniería",
-      contact: "10 / Contacto",
+      learning: "09 / Formación continua",
+      interests: "10 / Más allá de la ingeniería",
+      contact: "11 / Contacto",
     },
 
     content: {
@@ -358,12 +364,12 @@ export const translations = {
 
     engineeringProjects: [
       {
-        category: "AEROESPACIAL · SOFTWARE",
-        title: "Telemetría aeronáutica y detección de anomalías",
+        category: "AEROESPACIAL · INGENIERÍA DE SOFTWARE",
+        title: "Monitorización de sistemas aeronáuticos y diagnóstico de fallos",
         description:
-          "Proyecto de ingeniería que explora la telemetría aeronáutica sintética, el procesamiento de datos, la detección de anomalías y la monitorización interactiva.",
-        status: "En desarrollo",
-        date: "Objetivo: diciembre de 2026",
+          "Un proyecto personal creado para unir mi formación en aviónica con mis estudios de ingeniería de software. Construí un simulador interactivo para explorar la telemetría aeronáutica, las fases de vuelo, el diagnóstico de fallos y la integración de sistemas full-stack.",
+        status: "Completado",
+        date: "2026",
       },
       {
         category: "INDUSTRIA 4.0 · IoT",
@@ -385,28 +391,32 @@ export const translations = {
 
     academicProjects: [
       {
-        category: "ROBÓTICA · SISTEMAS EMBEBIDOS",
-        title: "Robot Arduino con evasión de obstáculos",
+        category: "AVIÓNICA · SISTEMAS AERONÁUTICOS",
+        title: "Curso autodidacta Airbus A320 ATA 27",
         description:
-          "Proyecto académico de robótica con Arduino y detección ultrasónica de obstáculos. Obtuvo el segundo lugar.",
+          "Trabajo final en UNAQ, mayo–agosto de 2020: creé un curso virtual dinámico en PowerPoint sobre los controles de vuelo de la familia A320 (ATA 27), diseñado para que otras personas pudieran formarse de manera autónoma y a su propio ritmo.",
+        date: "Mayo–agosto de 2020",
       },
       {
         category: "AVIACIÓN · MANTENIMIENTO",
         title: "Proyecto de mantenimiento de Cessna 172",
         description:
-          "Proyecto académico de mantenimiento aeronáutico realizado durante la formación en aviónica, entre febrero y marzo de 2020.",
-      },
-      {
-        category: "AVIÓNICA · SISTEMAS AERONÁUTICOS",
-        title: "Airbus A320 — Controles de vuelo ATA 27",
-        description:
-          "Estudio académico independiente de los sistemas de control de vuelo del Airbus A320 mediante recursos de formación virtual.",
+          "Simulación de un taller de mantenimiento aeronáutico en UNAQ, febrero–marzo de 2020. Trabajamos siguiendo los manuales de mantenimiento y las referencias ATA, desmontando y volviendo a montar componentes para reproducir los procedimientos de un taller aeronáutico.",
+        date: "Febrero–marzo de 2020",
       },
       {
         category: "ROBÓTICA · TRABAJO EN EQUIPO",
         title: "Competición de robótica WER México",
         description:
           "Integrante de un equipo finalista en la competición de robótica WER México de 2017.",
+        date: "2017",
+      },
+      {
+        category: "ROBÓTICA · SISTEMAS EMBEBIDOS",
+        title: "Robot Arduino con evasión de obstáculos",
+        description:
+          "Proyecto académico de robótica con Arduino y detección ultrasónica de obstáculos. Obtuvo el segundo lugar.",
+        date: "2017",
       },
     ],
 
@@ -450,14 +460,14 @@ export const translations = {
           "Estudios universitarios de ingeniería enfocados en software, IoT e Industria 4.0.",
       },
       {
-        degree: "Técnico Superior Universitario en Aviónica",
-        description:
-          "Formación técnica superior en aviónica, sistemas aeronáuticos y mantenimiento.",
-      },
-      {
         degree: "Bootcamp de Desarrollo Frontend",
         description:
           "Formación intensiva en desarrollo web frontend.",
+      },
+      {
+        degree: "TSU en Mantenimiento Aeronáutico, Aviónica",
+        description:
+          "Formación técnica superior en aviónica, sistemas aeronáuticos y mantenimiento.",
       },
       {
         degree: "Bachillerato Tecnológico en Programación",
@@ -552,15 +562,16 @@ export const translations = {
 
     labels: {
       about: "01 / À propos",
-      engineering: "02 / Projets sélectionnés",
-      academic: "03 / Projets académiques",
-      web: "04 / Développement web",
+      engineering: "02 / Projets d’ingénierie",
+      fieldwork: "03 / Expérience en équipe",
+      academic: "04 / Projets académiques",
+      web: "08 / Développement web",
       experience: "05 / Expérience professionnelle",
       education: "06 / Parcours académique",
       skills: "07 / Compétences techniques",
-      learning: "08 / Formation continue",
-      interests: "09 / Au-delà de l'ingénierie",
-      contact: "10 / Contact",
+      learning: "09 / Formation continue",
+      interests: "10 / Au-delà de l'ingénierie",
+      contact: "11 / Contact",
     },
 
     content: {
@@ -623,12 +634,12 @@ export const translations = {
 
     engineeringProjects: [
       {
-        category: "AÉROSPATIAL · LOGICIEL",
-        title: "Télémétrie aéronautique et détection d'anomalies",
+        category: "AÉROSPATIAL · GÉNIE LOGICIEL",
+        title: "Supervision des systèmes aéronautiques et diagnostic des pannes",
         description:
-          "Projet d'ingénierie explorant la télémétrie aéronautique synthétique, le traitement des données, la détection d'anomalies et la supervision interactive.",
-        status: "En développement",
-        date: "Objectif : décembre 2026",
+          "Un projet personnel créé pour réunir ma formation en avionique et mes études en génie logiciel. J’ai conçu un simulateur interactif pour explorer la télémétrie aéronautique, les phases de vol, le diagnostic des pannes et l’intégration de systèmes full-stack.",
+        status: "Terminé",
+        date: "2026",
       },
       {
         category: "INDUSTRIE 4.0 · IoT",
@@ -650,28 +661,32 @@ export const translations = {
 
     academicProjects: [
       {
-        category: "ROBOTIQUE · SYSTÈMES EMBARQUÉS",
-        title: "Robot Arduino d'évitement d'obstacles",
+        category: "AVIONIQUE · SYSTÈMES AÉRONAUTIQUES",
+        title: "Formation autonome Airbus A320 ATA 27",
         description:
-          "Projet académique de robotique utilisant Arduino et la détection ultrasonique d'obstacles. Deuxième place obtenue.",
+          "Projet de fin d’études à l’UNAQ, mai–août 2020 : création d’un cours virtuel dynamique sur PowerPoint consacré aux commandes de vol de la famille A320 (ATA 27), conçu pour permettre à d’autres personnes de se former en autonomie, à leur rythme.",
+        date: "Mai–août 2020",
       },
       {
         category: "AVIATION · MAINTENANCE",
         title: "Projet de maintenance d'un Cessna 172",
         description:
-          "Projet académique de maintenance aéronautique réalisé pendant la formation en avionique, entre février et mars 2020.",
+          "Simulation d’un atelier de maintenance aéronautique à l’UNAQ, février–mars 2020. Travail selon les manuels de maintenance et les références ATA, avec démontage et remontage de composants dans le cadre d’un atelier aéronautique.",
+        date: "Février–mars 2020",
       },
       {
-        category: "AVIONIQUE · SYSTÈMES AÉRONAUTIQUES",
-        title: "Airbus A320 — Commandes de vol ATA 27",
-        description:
-          "Étude académique autonome des systèmes de commandes de vol de l'Airbus A320 à l'aide de ressources de formation virtuelle.",
-      },
-      {
-        category: "ROBOTIQUE · TRAVAIL D'ÉQUIPE",
+        category: "ROBOTIQUE · TRAVAIL D’ÉQUIPE",
         title: "Compétition de robotique WER México",
         description:
-          "Membre d'une équipe finaliste lors de la compétition de robotique WER México en 2017.",
+          "Membre d’une équipe finaliste lors de la compétition de robotique WER México en 2017.",
+        date: "2017",
+      },
+      {
+        category: "ROBOTIQUE · SYSTÈMES EMBARQUÉS",
+        title: "Robot Arduino d’évitement d’obstacles",
+        description:
+          "Projet académique de robotique utilisant Arduino et la détection ultrasonique d’obstacles. Deuxième place obtenue.",
+        date: "2017",
       },
     ],
 
@@ -715,14 +730,14 @@ export const translations = {
           "Études universitaires d'ingénierie axées sur les logiciels, l'IoT et l'industrie 4.0.",
       },
       {
-        degree: "Technicien supérieur universitaire en avionique",
-        description:
-          "Formation technique supérieure en avionique, systèmes aéronautiques et maintenance.",
-      },
-      {
         degree: "Bootcamp de développement frontend",
         description:
           "Formation intensive en développement web frontend.",
+      },
+      {
+        degree: "TSU en maintenance aéronautique, avionique",
+        description:
+          "Formation technique supérieure en avionique, systèmes aéronautiques et maintenance.",
       },
       {
         degree: "Baccalauréat technologique en programmation",
