@@ -232,10 +232,10 @@ export const translations = {
     },
 
     content: {
-      aboutTitleFirst: "Mentalidad de ingeniería.",
+      aboutTitleFirst: "Una mirada de ingeniería.",
       aboutTitleAccent: "Curiosidad sin fronteras.",
       aboutP1:
-        "Mi trayectoria comenzó en la aviación, donde la precisión, la seguridad y el pensamiento sistémico son fundamentales. Hoy amplío esa base hacia la ingeniería de sistemas computacionales y el desarrollo de software.",
+        "Mi trayectoria comenzó en la aviación, donde la precisión, la seguridad y el pensamiento sistémico son fundamentales. Hoy aplico esa base a la ingeniería en sistemas computacionales y al desarrollo de software.",
       aboutP2:
         "Me interesa especialmente la conexión entre la industria aeroespacial, los dispositivos conectados, la automatización industrial y los sistemas de software inteligentes.",
       aboutP3:
@@ -244,7 +244,7 @@ export const translations = {
       engineeringTitleFirst: "Proyectos de",
       engineeringTitleAccent: "ingeniería.",
       engineeringIntro:
-        "Proyectos que exploran el software, los sistemas aeroespaciales, la monitorización industrial y la ingeniería aplicada.",
+        "Proyectos sobre software, sistemas aeroespaciales, monitorización industrial e ingeniería aplicada.",
 
       academicTitleFirst: "Aprendizaje aplicado",
       academicTitleAccent: "y logros.",
@@ -429,10 +429,10 @@ export const translations = {
     },
 
     content: {
-      aboutTitleFirst: "Esprit d'ingénieur.",
+      aboutTitleFirst: "Une approche d’ingénieur.",
       aboutTitleAccent: "Curiosité sans frontières.",
       aboutP1:
-        "Mon parcours a commencé dans l'aviation, où la précision, la sécurité et la pensée systémique sont essentielles. Aujourd'hui, j'élargis cette base à l'ingénierie informatique et au développement logiciel.",
+        "Mon parcours a commencé dans l’aviation, où la précision, la sécurité et la pensée systémique sont essentielles. Aujourd’hui, je m’appuie sur cette expérience pour étudier l’ingénierie des systèmes informatiques et le développement logiciel.",
       aboutP2:
         "Je m'intéresse particulièrement aux liens entre l'aérospatiale, les objets connectés, l'automatisation industrielle et les systèmes logiciels intelligents.",
       aboutP3:
@@ -441,7 +441,7 @@ export const translations = {
       engineeringTitleFirst: "Projets",
       engineeringTitleAccent: "d'ingénierie.",
       engineeringIntro:
-        "Des projets explorant les logiciels, les systèmes aérospatiaux, la supervision industrielle et l'ingénierie appliquée.",
+        "Des projets autour du logiciel, des systèmes aérospatiaux, de la supervision industrielle et de l’ingénierie appliquée.",
 
       academicTitleFirst: "Apprentissage appliqué",
       academicTitleAccent: "et réalisations.",

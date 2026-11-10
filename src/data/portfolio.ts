@@ -17,7 +17,7 @@ export const engineeringProjects = [
     category: "AEROSPACE · SOFTWARE ENGINEERING",
     title: "Aircraft Systems Monitoring & Fault Diagnosis",
     description:
-      "A personal project created to bring together my background in avionics and my studies in software engineering. I built an interactive simulator to explore aircraft telemetry, flight phases, fault diagnosis, and full-stack systems integration.",
+      "I developed this project to apply my avionics knowledge to software development and explore how the two disciplines can be integrated.",
     details:
       "A personal initiative motivated by my interest in connecting avionics and software engineering. It includes synthetic aircraft telemetry, a simplified flight simulation, six predefined fault scenarios, ATA references, interactive dashboards and an optional local FastAPI backend.",
     technologies: ["React", "TypeScript", "Python", "FastAPI", "SQLite", "Docker"],
